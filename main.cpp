@@ -12,9 +12,21 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 int main()
 {
+    // Create the Stepper Class
     Stepper lcStepper;
     
-    lcStepper.printTestString();
+    // Send the Introduction Message
+    lcStepper.Introduction();
+    
+    // Get User Input
+    lcStepper.GetUserInfo();
+    
+    // Ask user what they would like to know
+    bool lbFinished = false;
+    while(!lbFinished)
+    {
+        lbFinished = lcStepper.AskUserWhatTheyWouldLikeToKnow();
+    }
 
     return 0;
 }
